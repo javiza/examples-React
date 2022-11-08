@@ -1,9 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
-import Father from './components/container/father';
+// import Father from './components/container/father';
 // import Greeting from './components/pure/greeting';
 // import Greetingf from './components/pure/greetingF';
-// import TaskListComponent from './components/container/task_list';
+import TaskListComponent from './components/container/task_list';
 // import GreetingStyled from './components/pure/greetingStyled';
 // import Ejemplo1 from './hooks/Ejemplo1';
 // import Ejemplo2 from './hooks/Ejemplo2';
@@ -31,9 +31,9 @@ function App() {
           </h3> 
         </Ejemplo4>*/}
         {/* <GreetingStyled name="Martin"></GreetingStyled> */}
-       {/* <TaskListComponent></TaskListComponent>  */}
+       <TaskListComponent></TaskListComponent>  
        {/* gestion de eventos */}
-       <Father></Father>
+       {/* <Father></Father> */}
         
       </header>
     </div>

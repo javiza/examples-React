@@ -47,11 +47,32 @@ const TaskListComponent = () => {
       console.log("TaskList component is going to unmount...");
     };
   }, [tasks]);
+function completeTask(task) {
+  console.log('complete this Task', task);
+//actualizar estado para tarea completada y cambie el icono a un c
+  const index = tasks.indexOf(task);
+  const tempTasks = [...tasks];
+  tempTasks[index].completed = !tempTasks[index].completed
+  //we update the state of the component with the new list of tasks and it will update the
+  //iteration of the tasks in order to show the task update
+  setTasks(tempTasks);
+} 
+function deleteTask(task){
+  console.log('delete this Task', task);
+  const index = tasks.indexOf(task);
+  const tempTasks = [...tasks];
+  tempTasks.splice(index,1);
+  setTasks(tempTasks);
 
-  const changeCompleted = (id) => {
-    console.log("TODO: Cambiar estado de una tarea");
-  };
-
+}
+function addTask(task) {
+  console.log('complete this Task', task);
+  const index = tasks.indexOf(task);
+  const tempTasks = [...tasks];
+  tempTasks.push(task);
+  setTasks(tempTasks);
+  
+}
   return (
     <div>
       <div className="col-12">
@@ -76,7 +97,10 @@ const TaskListComponent = () => {
                 {/* recibe tantos td como tareas hay */}
                 {tasks.map((task, index) => {
                   return (
-                  <TaskComponent key={index} task={task}></TaskComponent>
+                  <TaskComponent 
+                  key={index}
+                   task={task} 
+                   complete={completeTask} remove={deleteTask}></TaskComponent>
                   )
                 })}
 
@@ -84,9 +108,10 @@ const TaskListComponent = () => {
             </table>
 
           </div>
-          <Taskform></Taskform>
+        
         </div>
       </div>
+      <Taskform add={addTask}></Taskform>
     </div>
   );
 };
