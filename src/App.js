@@ -1,9 +1,11 @@
 // import logo from './logo.svg';
 import './App.css';
+import OptionalRender from './components/pure/optionalRender';
 // import Father from './components/container/father';
 // import Greeting from './components/pure/greeting';
 // import Greetingf from './components/pure/greetingF';
-import TaskListComponent from './components/container/task_list';
+// import TaskListComponent from './components/container/task_list';
+// import TaskPage from './pages/tasks/TaskPage';
 // import GreetingStyled from './components/pure/greetingStyled';
 // import Ejemplo1 from './hooks/Ejemplo1';
 // import Ejemplo2 from './hooks/Ejemplo2';
@@ -18,22 +20,26 @@ function App() {
         {/* <Greeting name={"Martín"}></Greeting> */}
         {/* Componente de ejemplo funcional */}
         {/* <Greetingf name="Martín"></Greetingf> */}
-        {/* Componente de Listado de Tareas */}
+        {/* ----Componente de Listado de Tareas--- */}
       
-        {/* Ejemplos de uso de HOOKS */}
+        {/*--- Ejemplos de uso de HOOKS--- */}
          {/* <Ejemplo1></Ejemplo1> */}
         {/* <Ejemplo2></Ejemplo2> */}
         {/* <MiComponenteConContexto></MiComponenteConContexto> */}
         {/* <Ejemplo4 nombre="Martín">
-          {/* Todo loq ue hay aquí, es tratado como props.children 
+          {/*-- Todo loq ue hay aquí, es tratado como props.children 
           <h3>
             Contenido del props.children
           </h3> 
         </Ejemplo4>*/}
         {/* <GreetingStyled name="Martin"></GreetingStyled> */}
-       <TaskListComponent></TaskListComponent>  
-       {/* gestion de eventos */}
+       {/* <TaskListComponent></TaskListComponent>   */}
+       {/* <TaskPage></TaskPage> */}
+       {/* --gestion de eventos --*/}
        {/* <Father></Father> */}
+       {/* ---Ejemplos de renderizado condicional--- */}
+       <OptionalRender></OptionalRender>
+
         
       </header>
     </div>
