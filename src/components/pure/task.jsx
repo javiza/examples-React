@@ -62,8 +62,21 @@ const TaskComponent = ({ task, complete, remove}) => {
         }
         
     }
+const taskCompleted = {
+    backgroundColor: 'blue',
+    color: 'gray',
+    fontWeight: 'bold',
+    textDecoration: 'line-through'
+}
+const taskPending = {
+   
+    color: 'tomato',
+    fontWeight: 'bold',
+
+}
+
     return (
-        <tr className='fw-normal'>
+        <tr className='fw-normal' style={task.completed ? taskCompleted: taskPending}>
             <th>
                 <span className='ms-2'>{task.name}</span>
             </th>
@@ -87,7 +100,9 @@ const TaskComponent = ({ task, complete, remove}) => {
                 {/* <span >{task.completed ? 'Completed' : 'Pending'}</span> */}
                 {/* function for depuration */}
                 {taskIconCompleted()}
-                <i className='bi-trash task-action' onClick={() => remove(task)} style={{color: 'tomato', fontWeight: 'bold'}}></i>
+                {/* <i className='bi-trash task-action' onClick={() => remove(task)} style={{color: 'tomato', fontWeight: 'bold'}}></i> */}
+                <i className='bi-trash task-action' style={{color: 'tomato'}}  onClick={() => remove(task)} ></i>
+
             </td>
 
         </tr>
