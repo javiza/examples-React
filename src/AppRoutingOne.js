@@ -4,6 +4,8 @@ import NotFoundPage from './pages/404/NotFoundPage'
 import AboutPage from './pages/about-faqs/AboutPage';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import ProfilePage from './pages/profiles/ProfilePage';
+import TaskPage from './pages/tasks/TaskPage';
+import TaskDetailPage from './pages/tasks/TaskDetailPage';
 
 const AppRoutingOne = () => {
    return (
@@ -20,7 +22,8 @@ const AppRoutingOne = () => {
             <Route exact path='/' component={HomePage}/>
             <Route  path='/(about|faqs)' component={AboutPage}/>
             <Route  path='/profile' component={ProfilePage}/>
-            
+            <Route path='/task' component={TaskPage}/>
+            <Route path='/task:id' component={TaskDetailPage}/>
             {/* not found 404 */}
             <Route component={NotFoundPage}/>
           </Switch>
