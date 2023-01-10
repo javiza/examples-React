@@ -6,15 +6,19 @@ import 'bootstrap/dist/css/bootstrap.css';
 //bootstrap icons
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AppRoutingOne from './AppRoutingOne';
 
+//para cambiar nuestro enrutado de appa a appRoutingOne debemos cambiar 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <AppRoutingOne />
   </React.StrictMode>,
   document.getElementById('root')
 );
+//recordar que en v6 de react-router-dom cambia la sintaxis del enrutado
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
