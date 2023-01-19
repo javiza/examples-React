@@ -1,4 +1,5 @@
 //rfc
+import {useHistory} from 'react-router-dom'
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -22,6 +23,7 @@ const Loginformik = () => {
         email: '',
         password: ''
     }
+    const history = useHistory();
     return (
       <div>
         <h4>Login Formik</h4>
@@ -36,7 +38,8 @@ const Loginformik = () => {
             await new Promise((r) => setTimeout(r, 1000));
             alert(JSON.stringify(values, null, 2));
             //aca cuando me logeo estos datos quedan registrados en el loocalstore del navegador
-            localStorage.setItem('credentials', values)
+            await localStorage.setItem('credentials', values);
+            history.push('/profile');
           }}
         >
         {/* we obtain props from formik */}
