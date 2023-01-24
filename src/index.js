@@ -8,13 +8,15 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
-import AppRoutingOne from './AppRoutingOne';
+import AppFinal from './AppFinal';
+// import AppRoutingOne from './AppRoutingOne';
 
 //para cambiar nuestro enrutado de appa a appRoutingOne debemos cambiar 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <AppRoutingOne />
+    {/* <AppRoutingOne /> */}
+    <AppFinal/>
   </React.StrictMode>,
   document.getElementById('root')
 );
